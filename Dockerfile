@@ -9,7 +9,7 @@ COPY . /www/webapp
 ## 编译
 # RUN go build .
 # RUN go build /www/webapp
-RUN go mod init main
+#RUN go mod init main
 RUN go env -w GOPROXY=https://goproxy.cn,direct
 
 # RUN go run main.go
