@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia Search Engine</title>
+    <!--<script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/angular.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+    <script src="assets/js/angular-animate.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/viewer2.css">
+</head>
+<body>
+
+<div class="main">
+
+    <!-- Home Page -->
+
+    <div class="home">
+        <div class="container">
+            <div class="row">
+                <div class="eight columns offset-by-two">
+                    <h1 class="headline">Wikipedia Search Engine</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="eight columns offset-by-two">
+                    <form action="" class="wiki-search-form">
+                        <input type="search" placeholder="Search Wikipedia..." class="wiki-search-input"
+                               id="wiki-search-input">
+                        <button class="button btn btn-wiki">Wiki Search</button>
+                        <a class="button btn btn-lucky" href="http://zh.wikipedia.org/wiki/Special:Random"
+                           target="_blank">I'm Feeling Lucky</a>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="eight columns offset-by-two">
+                    <a href="assets/html/game.html">小游戏</a>
+                    <footer class="attribution">
+                        <p>Designed and coded by <a href="https://github.com/wudixm">Hoyt Wu</a></p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Page -->
+
+    <div class="result hidden">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="two-thirds column">
+                        <form action="" class="result-wiki-search-form">
+                            <input type="text" placeholder="Search Wikipedia..." class="result-wiki-search-form-input"
+                                   id="result-wiki-search-form-input">
+                            <button class="btn result-btn-wiki">Wiki Search</button>
+                        </form>
+                    </div>
+                    <div class="one-third column">
+                        <h1>Wikipedia Search</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="one-half column">
+
+                <section class="search-results">
+                    <div class="one-half column">
+                        <div class="display-results"></div>
+                    </div>
+                </section>
+            </div>
+            <div class="one-half column" style="margin-left: 0">
+                <form class="my-form">
+                        <h1>创建</h1>
+                        <ul>
+                            <li>
+                                <select name="lang_select" id="submit-select">
+                                    <option value="Java">Java</option>
+                                    <option value="C">C</option>
+                                    <option value="C++">C++</option>
+                                    <option value="PHP">PHP</option>
+                                    <option value="C#">C#</option>
+                                    <option value="Python">Python</option>
+                                    <option value="Javascript">Javascript</option>
+                                    <option value="Ruby">Ruby</option>
+                                    <option value="SQL">SQL</option>
+                                    <option value="Lua">Lua</option>
+                                    <option value="Shell">Shell</option>
+                                    <option value="Go">Go</option>
+                                    <option value="Objective-C">Objective-C</option>
+                                    <option value="Scratch">Scratch</option>
+                                    <option value="Groovy">Groovy</option>
+                                    <option value="SmallTalk">SmallTalk</option>
+                                    <option value="Scalar">Scalar</option>
+                                    <option value="HTML">HTML</option>
+                                    <option value="CSS">CSS</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <!--<select>
+                                    <option selected disabled>-- Please choose an option --</option>
+                                    <option>Request Quote</option>
+                                    <option>Send Resume</option>
+                                    <option>Other</option>
+                                </select>-->
+                            </li>
+                            <li>
+                                <div class="grid grid-2">
+                                    <input type="text" placeholder="标题" required id="submit-title">
+                                    <input type="text" placeholder="Tag" required id="submit-tag">
+                                </div>
+                            </li>
+                            <li>
+                                <textarea placeholder="代码" id="submit-content" cols="43"></textarea>
+                            </li>
+                            <!--<li>
+                                <input type="checkbox" id="terms">
+                                <label for="terms">I have read and agreed with <a href="">the terms and
+                                        conditions.</a></label>
+                            </li>-->
+                            <li>
+                                <div class="grid grid-3">
+                                    <button class="btn-grid" type="submit" id="btn-grid-submit">SUBMIT</button>
+                                </div>
+                            </li>
+                        </ul>
+                </form>
+            </div>
+
+        </div> <!-- Container -->
+    </div> <!-- Results -->
+
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/viewer2.js"></script>
+</body>
+</html>
