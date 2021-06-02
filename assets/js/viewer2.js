@@ -118,7 +118,7 @@ $(".btn-wiki").click(function (event) {
     event.preventDefault();
     var keyword = $(".wiki-search-input").val();
 
-    if (keyword !== "") {
+    // if (keyword !== "") {
         $(".result-wiki-search-form-input").val(keyword);
         $(".home").addClass('hidden');
         $(".result").removeClass('hidden');
@@ -127,9 +127,9 @@ $(".btn-wiki").click(function (event) {
         document.getElementById("result-wiki-search-form-input").blur();
         $(".display-results").html("");
         ajax(keyword);
-    } else {
-        alert("Enter a keyword into the search box");
-    }
+    // } else {
+    //     alert("Enter a keyword into the search box");
+    // }
 
 });
 

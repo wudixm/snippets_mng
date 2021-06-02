@@ -14,18 +14,35 @@ import (
 	"time"
 )
 
+// M is an alias for map[string]interface{}
+type M map[string]interface{}
+
 func searchByKeyword(kw string) []interface{} {
 	var (
-		r map[string]interface{}
+		r M
 	)
+	log.Printf("kw is %s", kw)
+	log.Printf("kw is \"\" %s", kw == "")
 	var buf bytes.Buffer
-	query := map[string]interface{}{
-		"query": map[string]interface{}{
-			"multi_match": map[string]interface{}{
+	query := M{
+		"query": M{
+			"multi_match": M{
 				"query":  kw,
 				"fields": []string{"content", "title"},
 			},
 		},
+	}
+	if kw == "" {
+
+		sorted_list := [1]M{{"_id": M{"order": "desc"}}}
+		query = M{
+			"query": M{
+				"match_all": M{
+				},
+			},
+			"sort": sorted_list,
+			"size": 100,
+		}
 	}
 
 	if err := json.NewEncoder(&buf).Encode(query); err != nil {
