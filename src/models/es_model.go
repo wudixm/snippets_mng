@@ -20,7 +20,9 @@ func ConnectES() {
 
 	es, err := elasticsearch.NewClient(elasticsearch.Config{
 
-		Addresses: []string{"http://127.0.0.1:9200"},
+		//Addresses: []string{"http://127.0.0.1:9200"},
+		//Addresses: []string{"http://localhost:9200"},
+		Addresses: []string{"http://192.168.200.217:9200"},
 		// Retry on 429 TooManyRequests statuses
 		//
 		RetryOnStatus: []int{502, 503, 504, 429},
